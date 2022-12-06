@@ -1,9 +1,7 @@
 /env
 
-chromedriver
-
 /video_assets
+/final
+/initial_assets
 
-minecraft.mp4
-
-/__pychace__
+__pycache__/

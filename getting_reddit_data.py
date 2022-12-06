@@ -29,10 +29,4 @@ async def get_reddit_data():
     gTTS(text=title, lang='en', slow=False).save('./video_assets/titleTTS.mp3')
     gTTS(text=commentText, lang='en', slow=False).save('./video_assets/commentTTS.mp3')
 
-
-    jsonData = {
-        "title": title,
-        "comment": commentText
-    }
-
     await browser.close()
