@@ -2,7 +2,7 @@ import asyncio
 from pyppeteer import launch
 from gtts import gTTS
 
-async def main():
+async def get_reddit_data():
     browser = await launch(headless = False)
     page = await browser.newPage()
     await page.goto('https://www.reddit.com/r/AskReddit/comments/zd6pxv/whats_something_we_all_just_pretend_no_one_does/')
@@ -37,5 +37,8 @@ async def main():
     }
 
     await browser.close()
+
+async def main():
+    await get_reddit_data()
 
 asyncio.get_event_loop().run_until_complete(main())

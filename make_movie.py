@@ -1,4 +1,4 @@
-from moviepy.editor import concatenate_videoclips, VideoFileClip, CompositeVideoClip, AudioFileClip, ImageClip
+from moviepy.editor import concatenate_videoclips, VideoFileClip, CompositeVideoClip, AudioFileClip, ImageClip, vfx
 
 
 def make_video_from_data():
@@ -14,7 +14,7 @@ def make_video_from_data():
     titleComposite.audio = titleAudio
 
 
-    # title audio
+    # comment audio
     commentAudio = AudioFileClip('./video_assets/commentTTS.mp3')
     commentDuration = commentAudio.duration
     # the comment
@@ -28,4 +28,8 @@ def make_video_from_data():
     final = concatenate_videoclips([titleComposite, commentComposite])
 
     # creating the video
-    final.write_videofile("final.mp4")
+    final.write_videofile("finalVideo.mp4")
+
+    # final.preview()
+
+make_video_from_data()
