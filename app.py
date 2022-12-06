@@ -26,7 +26,11 @@ async def main():
     commentText = await page.evaluate('(commentTextAtr) => commentTextAtr.textContent', commentTextAtr)
 
 
-    
+    jsonData = {
+        "title": title,
+        "comment": commentText
+    }
+
 
 
 
